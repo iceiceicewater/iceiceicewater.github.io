@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+
+<title>Haha</title>
+
+<style>
+h1 {
+    color: red;
+}
+hihi {
+	color: green;
+	font-size: 12px;
+}
+.ho {
+  font-size: 150%;
+  border: thin solid #000;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.ho2 {
+  font-size: 50%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.ho3 {
+  font-size: 50%;
+  border: thin solid #166888;
+  margin-top: 10px;
+  padding: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+
+<hihi>aaa</hihi>
+
+<form name="foo">
+  <input type="text" name="cc">
+  <input type="button" name="btn" value="click me" onclick="pp()">
+  <input type="button" name="btn" value="click me 2" onclick="pp2()">
+  
+  <div class="ho">
+    1+2+3+...<input type="text" name="cc2">
+    <input type="button" name="btn" value="click me 3" onclick="pp3()">
+  </div>
+  
+    
+  <div class="ho2">
+    <input type="text" name="cc3">
+	<input type="text" name="cc4">
+    <input type="text" name="cc5">
+    <input type="button" name="btn" value="click me 4" onclick="pp4()">
+  </div>
+  
+    <div class="ho3">
+    <input type="text" name="cc6">
+    <input type="button" name="btn" value="click me 5" onclick="pp5()">
+  </div>
+
+</form>
+
+
+</body>
+
+</html>
+
+<script>
+function pp () {
+  alert("hi " + window.document.foo.cc.value);
+}
+function pp2 () {
+  var a = window.document.foo.cc.value;
+  if (a == 2) {
+    alert("right");
+  }
+  else {
+    alert("wrong");
+  }
+}
+
+function pp3 () {
+var bb = window.document.foo.cc2.value;
+var sum = 0
+  for(var i = 0; i <= bb; i++){
+  
+  sum = sum + i;
+  
+  }
+  alert(sum);
+}
+
+function pp4 () {
+
+var dd1 = parseFloat(window.document.foo.cc3.value);
+var dd2 = parseFloat(window.document.foo.cc4.value);
+var dd3 = parseFloat(window.document.foo.cc5.value);
+
+
+if (dd1>=dd2 && dd1>=dd3 ){
+alert(dd1)
+}
+else if (dd2>=dd1 && dd2>=dd3){
+alert(dd2)
+}
+else if (dd3>=dd1 && dd3>=dd2){
+alert(dd3)
+}
+else {
+alert ("Error!")
+console.log("Num1="+dd1)
+console.log("Num2="+dd2)
+console.log("Num3="+dd3)
+}
+
+}
+//Input kk, calculate the Fibonacci number (kk)
+//Using a, b, c to calculate Fibonacci
+// %: get remainder
+function pp5 () {
+  var kk = parseInt(window.document.foo.cc6.value);
+  var a=0;
+  var b=0;
+  var c=0;
+
+  for (var i=0; i<=kk; i++){
+
+    console.log(i,i%3);
+//Item 0 = 0
+    if (i==0){
+      a=0;
+      if (i==kk){
+        alert(a);
+      }
+    }
+//First item = 1
+    else if (i==1) {
+      b=1;
+      if (i==kk){
+        alert(b);
+      }
+    }
+//From Second item = 1,2,3,5,8,...
+    else if( i>=2 && i%3==2) {
+      c=a+b;
+      if (i==kk){
+        alert(c);
+      }
+    }
+
+    else if (i>=2 && i%3==0){
+      a=b+c;
+      if (i==kk){
+        alert(a);
+      }
+    }
+
+    else if (i>=2 && i%3==1){
+      b=c+a;
+      if (i==kk){
+         alert(b);
+      }
+    }
+  }
+}
+
+/*
+
+  var a;
+  
+  primary types:
+     1  2  2.4  4.3
+	 "hello"  "hi"  'kk'  'x'
+	 true  false
+	 null
+	 undefined
+	 NaN
+	 
+  objects:
+     
+
+*/
+
+
+// single line comment
+
+
+
+</script>
